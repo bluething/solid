@@ -1,5 +1,7 @@
 ### My learning note about SOLID principle
 
+![pyramidofcleancode](https://github.com/bluething/solid/blob/master/images/pyramidofcleancode.png?raw=true)
+
 ### Problem that we face in daily activity
 
 #### Code Fragility
