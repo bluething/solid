@@ -33,4 +33,10 @@ public class AccountTests {
         verify(transactionRepository).add(refEq(new Transaction(TODAY, POSITIVE_AMOUNT)));
     }
 
+    @Test
+    public void amountWithZeroBalanceWithdrawBalanceSubtractedWithWithdrawValue() {
+        account.withdraw(POSITIVE_AMOUNT);
+        verify(transactionRepository).add(refEq(new Transaction(TODAY, NEGATIVE_AMOUNT)));
+    }
+
 }
