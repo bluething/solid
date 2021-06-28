@@ -16,13 +16,13 @@ public class AccountTests {
     private static final LocalDate TODAY = LocalDate.now();
 
     @Mock
-    private Transaction transaction;
+    private TransactionRepository transactionRepository;
     private Account account;
 
     @Test
     public void amountWithZeroBalanceDepositWithPositiveValueBalanceAddedWithDepositValue() {
         account.deposit(POSITIVE_AMOUNT);
-        verify(transaction).add(refEq(new Transaction(TODAY, POSITIVE_AMOUNT)));
+        verify(transactionRepository).add(refEq(new Transaction(TODAY, POSITIVE_AMOUNT)));
     }
 
 }
