@@ -53,6 +53,7 @@ public abstract class Employee {
 
             // 3 logging
             System.out.println("Saved employee " + employee.toString());
+            // 4 exception handling
         } catch (IOException e){
             // 3
             System.out.println("ERROR: Could not save employee. " + e);
