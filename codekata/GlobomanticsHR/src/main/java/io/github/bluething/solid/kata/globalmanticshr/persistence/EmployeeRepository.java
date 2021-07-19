@@ -28,20 +28,11 @@ public class EmployeeRepository {
         return Arrays.asList(anna, billy, steve, magda);
     }
 
-    public void save(Employee employee) {
-        try {
-            String serializeString = serializer.serialize(employee);
-            // 2 file access
-            Path path = Paths.get(employee.getFullName()
-                    .replace(" ","_") + ".rec");
-            Files.write(path, serializeString.getBytes());
-
-            // 3 logging
-            System.out.println("Saved employee " + employee.toString());
-            // 4 exception handling
-        } catch (IOException e){
-            // 3
-            System.out.println("ERROR: Could not save employee. " + e);
-        }
+    public void save(Employee employee) throws IOException {
+        String serializeString = serializer.serialize(employee);
+        // 2 file access
+        Path path = Paths.get(employee.getFullName()
+                .replace(" ","_") + ".rec");
+        Files.write(path, serializeString.getBytes());
     }
 }
