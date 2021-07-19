@@ -1,5 +1,7 @@
 package io.github.bluething.solid.kata.globalmanticshr;
 
+import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
+
 import java.util.List;
 
 public class SaveEmployeesMain {
