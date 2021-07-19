@@ -63,7 +63,7 @@ public abstract class Employee {
         return this.firstName + " " + this.lastName;
     }
 
-    public void setNbHoursPerWeek(int i) {
+    public void setNbHoursPerWeek(int nbHoursPerWeek) {
         if(nbHoursPerWeek <= 0){
             throw new IllegalArgumentException("Income must be positive");
         }
