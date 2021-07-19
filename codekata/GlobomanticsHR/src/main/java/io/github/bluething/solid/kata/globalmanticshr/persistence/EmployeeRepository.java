@@ -12,6 +12,12 @@ import java.util.List;
 
 public class EmployeeRepository {
 
+    private final EmployeeFileSerializer serializer;
+
+    public EmployeeRepository(EmployeeFileSerializer employeeFileSerializer) {
+        this.serializer = employeeFileSerializer;
+    }
+
     public List<Employee> findAll() {
         Employee anna = new FullTimeEmployee("Anna Smith", 2000);
         Employee billy = new FullTimeEmployee("Billy Leech", 920);
