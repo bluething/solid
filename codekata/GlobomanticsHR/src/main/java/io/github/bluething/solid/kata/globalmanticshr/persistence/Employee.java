@@ -27,6 +27,7 @@ public abstract class Employee {
         this.monthlyIncome = monthlyIncome;
     }
 
+    // 5 This class is business entity, not as a repository
     public static void save(Employee employee) {
         try {
             // 1 serialization
