@@ -21,7 +21,7 @@ public class EmployeeRepository {
 
         return Arrays.asList(anna, billy, steve, magda);
     }
-    
+
     public static void save(Employee employee) {
         try {
             // 1 serialization
@@ -29,7 +29,7 @@ public class EmployeeRepository {
             sb.append("### EMPLOYEE RECORD ####");
             sb.append(System.lineSeparator());
             sb.append("NAME: ");
-            sb.append(employee.firstName + " " + employee.lastName);
+            sb.append(employee.getFullName());
             sb.append(System.lineSeparator());
             sb.append("POSITION: ");
             sb.append(employee.getClass().getTypeName());
@@ -38,7 +38,7 @@ public class EmployeeRepository {
             sb.append(employee.getEmail());
             sb.append(System.lineSeparator());
             sb.append("MONTHLY WAGE: ");
-            sb.append(employee.monthlyIncome);
+            sb.append(employee.getMonthlyIncome());
             sb.append(System.lineSeparator());
 
             // 2 file access

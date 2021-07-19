@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 public abstract class Employee {
     private final String firstName;
     private final String lastName;
+
     private int monthlyIncome;
     private int nbHoursPerWeek;
 
@@ -45,5 +46,9 @@ public abstract class Employee {
     }
     public int getNbHoursPerWeek() {
         return nbHoursPerWeek;
+    }
+
+    public int getMonthlyIncome() {
+        return monthlyIncome;
     }
 }
