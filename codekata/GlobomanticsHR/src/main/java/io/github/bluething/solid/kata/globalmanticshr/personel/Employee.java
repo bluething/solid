@@ -1,9 +1,4 @@
-package io.github.bluething.solid.kata.globalmanticshr.persistence;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+package io.github.bluething.solid.kata.globalmanticshr.personel;
 
 public abstract class Employee {
     private final String firstName;

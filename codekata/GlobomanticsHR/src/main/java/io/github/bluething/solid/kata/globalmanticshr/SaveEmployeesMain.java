@@ -1,7 +1,7 @@
 package io.github.bluething.solid.kata.globalmanticshr;
 
 import io.github.bluething.solid.kata.globalmanticshr.logging.ConsoleLogger;
-import io.github.bluething.solid.kata.globalmanticshr.persistence.Employee;
+import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileSerializer;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
 

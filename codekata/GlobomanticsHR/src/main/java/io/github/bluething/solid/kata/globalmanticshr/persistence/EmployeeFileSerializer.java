@@ -1,5 +1,7 @@
 package io.github.bluething.solid.kata.globalmanticshr.persistence;
 
+import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
+
 public class EmployeeFileSerializer {
     public String serialize(Employee employee) {
         StringBuilder sb = new StringBuilder();
