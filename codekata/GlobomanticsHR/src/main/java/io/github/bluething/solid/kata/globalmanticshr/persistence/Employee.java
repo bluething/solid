@@ -51,8 +51,10 @@ public abstract class Employee {
                     .replace(" ","_") + ".rec");
             Files.write(path, sb.toString().getBytes());
 
+            // 3 logging
             System.out.println("Saved employee " + employee.toString());
         } catch (IOException e){
+            // 3
             System.out.println("ERROR: Could not save employee. " + e);
         }
     }
