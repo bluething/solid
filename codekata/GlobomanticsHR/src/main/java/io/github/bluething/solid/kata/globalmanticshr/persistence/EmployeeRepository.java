@@ -30,7 +30,7 @@ public class EmployeeRepository {
 
     public void save(Employee employee) {
         try {
-
+            String serializeString = serializer.serialize(employee);
             // 2 file access
             Path path = Paths.get(employee.getFullName()
                     .replace(" ","_") + ".rec");
