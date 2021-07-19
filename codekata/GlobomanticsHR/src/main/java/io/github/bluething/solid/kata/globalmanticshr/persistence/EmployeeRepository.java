@@ -1,5 +1,8 @@
 package io.github.bluething.solid.kata.globalmanticshr.persistence;
 
+import io.github.bluething.solid.kata.globalmanticshr.personel.FullTimeEmployee;
+import io.github.bluething.solid.kata.globalmanticshr.personel.PartTimeEmployee;
+
 import java.util.Arrays;
 import java.util.List;
 
