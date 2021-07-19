@@ -1,0 +1,1 @@
+Rewrite code from [SOLID Software Design Principles in Java](https://app.pluralsight.com/courses/1d999aa8-870b-4b5e-a2d6-5c9ca24c8526/table-of-contents) course at Pluralsight by [dangeabunea](https://github.com/dangeabunea)
