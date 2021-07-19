@@ -1,6 +1,7 @@
 package io.github.bluething.solid.kata.globalmanticshr.persistence;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class EmployeeRepository {
 
