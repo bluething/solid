@@ -34,7 +34,7 @@ public class EmployeeRepository {
             // 2 file access
             Path path = Paths.get(employee.getFullName()
                     .replace(" ","_") + ".rec");
-            Files.write(path, sb.toString().getBytes());
+            Files.write(path, serializeString.getBytes());
 
             // 3 logging
             System.out.println("Saved employee " + employee.toString());
