@@ -29,6 +29,7 @@ public abstract class Employee {
 
     public static void save(Employee employee) {
         try {
+            // 1 serialization
             StringBuilder sb = new StringBuilder();
             sb.append("### EMPLOYEE RECORD ####");
             sb.append(System.lineSeparator());
