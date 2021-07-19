@@ -31,7 +31,8 @@ We have 2 choices when develop a software
 2. Adds a bit of complexity.  
 3. Maintainable code.
 
-Technical debt is costly, lower technical debt have a lower cost. Technical debt effect customer responsiveness, lower technical debt means we have small response time.
+Technical debt is costly, lower technical debt have a lower cost. The cost must manageable.  
+Technical debt effect customer responsiveness, lower technical debt means we adapt quickly with user requirement.
 
 The fact is:  
 1. No matter how good the team is, technical debt will accumulate over time.  
