@@ -46,6 +46,7 @@ public abstract class Employee {
             sb.append(employee.monthlyIncome);
             sb.append(System.lineSeparator());
 
+            // 2 file access
             Path path = Paths.get(employee.getFullName()
                     .replace(" ","_") + ".rec");
             Files.write(path, sb.toString().getBytes());
