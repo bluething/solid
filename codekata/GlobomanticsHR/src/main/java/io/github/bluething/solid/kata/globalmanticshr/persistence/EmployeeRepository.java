@@ -22,7 +22,7 @@ public class EmployeeRepository {
         return Arrays.asList(anna, billy, steve, magda);
     }
 
-    public static void save(Employee employee) {
+    public void save(Employee employee) {
         try {
             // 1 serialization
             StringBuilder sb = new StringBuilder();
