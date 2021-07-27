@@ -4,7 +4,6 @@ import io.github.bluething.solid.kata.globalmanticshr.logging.ConsoleLogger;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileSerializer;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
-import io.github.bluething.solid.kata.globalmanticshr.taxes.TaxCalculator;
 
 import java.text.NumberFormat;
 import java.util.List;
