@@ -12,7 +12,7 @@ A component should be extendable to make it behave in new ways.
 
 ##### Why modify an existing source code is a bad idea?
 
-There are a change to cascading changes in dependent class or module.
+There are a chance to cascading changes in dependent class or module.
 
 #### Why we need OCP?
 
