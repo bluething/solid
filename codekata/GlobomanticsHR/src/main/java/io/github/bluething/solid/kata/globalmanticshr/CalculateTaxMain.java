@@ -6,7 +6,6 @@ import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeReposi
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 import io.github.bluething.solid.kata.globalmanticshr.taxes.TaxCalculator;
 
-import javax.swing.*;
 import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
