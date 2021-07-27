@@ -2,6 +2,7 @@ package io.github.bluething.solid.kata.globalmanticshr.persistence;
 
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 import io.github.bluething.solid.kata.globalmanticshr.personel.FullTimeEmployee;
+import io.github.bluething.solid.kata.globalmanticshr.personel.Intern;
 import io.github.bluething.solid.kata.globalmanticshr.personel.PartTimeEmployee;
 
 import java.io.IOException;
@@ -25,6 +26,9 @@ public class EmployeeRepository {
 
         Employee steve = new PartTimeEmployee("Steve Jones", 800);
         Employee magda = new PartTimeEmployee("Magda Iovan", 920);
+
+        Employee john = new Intern("John Lee", 300, 10);
+        Employee catherine = new Intern("Catherine Allison", 500, 15);
 
         return Arrays.asList(anna, billy, steve, magda);
     }
