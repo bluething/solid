@@ -4,6 +4,8 @@ import io.github.bluething.solid.kata.globalmanticshr.logging.ConsoleLogger;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileSerializer;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
+import io.github.bluething.solid.kata.globalmanticshr.taxes.TaxCalculator;
+import io.github.bluething.solid.kata.globalmanticshr.taxes.TaxCalculatorFactory;
 
 import java.text.NumberFormat;
 import java.util.List;
@@ -19,12 +21,12 @@ public class CalculateTaxMain {
 
         Locale locale = new Locale("en", "US");
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
-        TaxCalculator taxCalculator = new TaxCalculator();
 
         double totalTax = 0.0;
         double tax = 0.0;
         String formattedTax = "";
         for (Employee employee : employees) {
+            TaxCalculator taxCalculator = TaxCalculatorFactory.create(employee);
             tax = taxCalculator.calculate(employee);
             formattedTax = currencyFormat.format(tax);
             logger.writeInfo(employee.getFullName() + " taxes = " + formattedTax);
