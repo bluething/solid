@@ -9,6 +9,11 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+    sourceCompatibility('11')
+    targetCompatibility('11')
+}
+
 dependencies {
     testImplementation 'org.mockito:mockito-core:3.11.2'
     testImplementation 'org.mockito:mockito-junit-jupiter:3.11.2'
