@@ -7,26 +7,33 @@ import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 import io.github.bluething.solid.kata.globalmanticshr.personel.ServiceLicenseAgreement;
 import io.github.bluething.solid.kata.globalmanticshr.personel.SubContractor;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ApproveSLAMain {
     public static void main(String[] args) {
-
-        ConsoleLogger logger = new ConsoleLogger();
-        EmployeeFileSerializer fileSerializer = new EmployeeFileSerializer();
-        EmployeeRepository repository = new EmployeeRepository(fileSerializer);
-
+        // Define SLA
         int minTimeOffPercent = 98;
         int maxResolutionDays = 2;
-        ServiceLicenseAgreement sla = new ServiceLicenseAgreement(minTimeOffPercent, maxResolutionDays);
+        ServiceLicenseAgreement companySla = new ServiceLicenseAgreement(
+                minTimeOffPercent,
+                maxResolutionDays);
 
-        List<Employee> employees = repository.findAll();
+        // Get collaborators from their own source
+        SubContractor subcontractor1 = new SubContractor(
+                "Rebekah Jackson",
+                "rebekah-jackson@abc.com",
+                3000,
+                15);
+        SubContractor subcontractor2 = new SubContractor(
+                "Harry Fitz",
+                "harryfitz@def.com",
+                3000, 15);
+        List<SubContractor> collaborators = Arrays.asList(subcontractor1, subcontractor2);
 
-        for (Employee employee : employees) {
-            if (employee instanceof SubContractor) {
-                SubContractor subContractor = (SubContractor) employee;
-                subContractor.approveSLA(sla);
-            }
+        // Check SLA
+        for (SubContractor s : collaborators) {
+            s.approveSLA(companySla);
         }
     }
 }
