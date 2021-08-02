@@ -28,6 +28,9 @@ public abstract class Employee {
                 this.lastName +
                 "@globomanticshr.com";
     }
+
+    public abstract void requestTimeOff(int nbDays, Employee manager);
+
     public String getFullName(){
         return this.firstName + " " + this.lastName;
     }
