@@ -30,7 +30,7 @@ public class EmployeeRepository {
         // Subcontractors
         Employee subcontractor = new SubContractor("Rebekah Jackson", 3000);
 
-        return Arrays.asList(anna, billy, steve, magda);
+        return Arrays.asList(anna, billy, steve, magda, john, subcontractor, catherine);
     }
 
     public void save(Employee employee) throws IOException {
