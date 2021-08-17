@@ -20,6 +20,7 @@ public class ExportPayslipMain {
         for (Employee employee : employees) {
             PaySlip paySlip = new PaySlip(employee, Month.AUGUST);
 
+            // What if I called other public method in paySlip object?
             String exportedText = paySlip.toTxt().toUpperCase();
             logger.writeInfo(exportedText);
         }
