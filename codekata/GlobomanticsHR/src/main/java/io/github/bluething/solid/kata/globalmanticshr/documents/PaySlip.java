@@ -4,7 +4,7 @@ import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 
 import java.time.Month;
 
-public class PaySlip implements ExportableDocument {
+public class PaySlip implements ExportableText {
 
     private final String employeeName;
     private final int monthlyIncome;
@@ -26,16 +26,6 @@ public class PaySlip implements ExportableDocument {
 
     public Month getMonth() {
         return month;
-    }
-
-    @Override
-    public byte[] toPdf() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public String toJson() {
-        throw new UnsupportedOperationException();
     }
 
     @Override
