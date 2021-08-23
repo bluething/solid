@@ -7,17 +7,22 @@ import io.github.bluething.solid.kata.globalmanticshr.personel.PartTimeEmployee;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class EmployeeFileRepository {
+public class EmployeeFileRepository implements EmployeeRepository{
     private final EmployeeFileSerializer fileSerializer;
 
     public EmployeeFileRepository(EmployeeFileSerializer fileSerializer) {
         this.fileSerializer = fileSerializer;
     }
 
+    @Override
     public List<Employee> findAll() {
         List<Employee> employees = new ArrayList<>();
 
@@ -58,5 +63,14 @@ public class EmployeeFileRepository {
             employee = new Intern(name, income, nbHours);
         }
         return employee;
+    }
+
+    @Override
+    public void save(Employee employee) throws IOException {
+        String serializedString = this.fileSerializer.serialize(employee);
+
+        Path path = Paths.get(employee.getFullName()
+                .replace(" ", "_") + ".rec");
+        Files.write(path, serializedString.getBytes());
     }
 }
