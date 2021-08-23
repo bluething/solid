@@ -1,18 +1,18 @@
 package io.github.bluething.solid.kata.globalmanticshr.payment;
 
-import io.github.bluething.solid.kata.globalmanticshr.notification.EmailSender;
-import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileRepository;
-import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileSerializer;
+import io.github.bluething.solid.kata.globalmanticshr.notification.Notifier;
+import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 
 import java.util.List;
 
 public class PaymentProcessor {
-    private final EmployeeFileRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
+    private final Notifier notifier;
 
-    public PaymentProcessor() {
-        EmployeeFileSerializer fileSerializer = new EmployeeFileSerializer();
-        this.employeeRepository = new EmployeeFileRepository(fileSerializer);
+    public PaymentProcessor(EmployeeRepository employeeRepository, Notifier notifier) {
+        this.employeeRepository = employeeRepository;
+        this.notifier = notifier;
     }
 
     public int sendPayment() {
@@ -21,7 +21,7 @@ public class PaymentProcessor {
 
         for (Employee employee : employees) {
             totalPayment += employee.getMonthlyIncome();
-            EmailSender.notify(employee);
+            notifier.notify(employee);
         }
 
         return totalPayment;
