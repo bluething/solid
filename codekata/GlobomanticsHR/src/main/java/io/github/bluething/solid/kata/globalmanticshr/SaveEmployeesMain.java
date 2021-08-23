@@ -1,6 +1,7 @@
 package io.github.bluething.solid.kata.globalmanticshr;
 
 import io.github.bluething.solid.kata.globalmanticshr.logging.ConsoleLogger;
+import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileRepository;
 import io.github.bluething.solid.kata.globalmanticshr.personel.Employee;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeFileSerializer;
 import io.github.bluething.solid.kata.globalmanticshr.persistence.EmployeeRepository;
@@ -13,7 +14,7 @@ public class SaveEmployeesMain {
         ConsoleLogger logger = new ConsoleLogger();
 
         EmployeeFileSerializer serializer = new EmployeeFileSerializer();
-        EmployeeRepository repository = new EmployeeRepository(serializer);
+        EmployeeRepository repository = new EmployeeFileRepository(serializer);
 
         List<Employee> employees = repository.findAll();
 
