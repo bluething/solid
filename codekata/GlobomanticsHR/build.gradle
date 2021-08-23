@@ -15,6 +15,7 @@ compileJava {
 }
 
 dependencies {
+    implementation 'com.sun.mail:jakarta.mail:1.6.4'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
