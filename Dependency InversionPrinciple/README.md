@@ -13,6 +13,9 @@ Modules that define _what_ the software should do, written to solve real problem
 
 Modules that define _how_ the software do, contain implementation details that are required to execute the business policies. For example logging, data access, I/O, network communication.
 
+High-level modules work together with low-level modules to deliver the business value for the customers.  
+High-level and low-level modules are relative concepts. In one point of view the component can act as a low level, but for other point of view act as high level. For example notification system.
+
 ##### Abstraction
 
 Every change to an abstraction corresponds to a change to its concrete implementations. Conversely, changes to concrete implementations do not always, or even usually, require changes to the interfaces that they implement.  
