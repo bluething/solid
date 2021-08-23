@@ -9,7 +9,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.util.Properties;
 
-public class EmailSender implements EmailNotifier {
+public class EmailSender implements Notifier {
     @Override
     public void notify(Employee employee) {
         // Configure email server
