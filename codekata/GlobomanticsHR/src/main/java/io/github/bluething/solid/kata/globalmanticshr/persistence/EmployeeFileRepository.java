@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class EmployeeFileRepository {
     private final EmployeeFileSerializer fileSerializer;
-    
+
     public EmployeeFileRepository(EmployeeFileSerializer fileSerializer) {
         this.fileSerializer = fileSerializer;
     }
@@ -22,7 +22,7 @@ public class EmployeeFileRepository {
         List<Employee> employees = new ArrayList<>();
 
         String path =  this.getClass().getClassLoader()
-                .getResource("employees.csv")
+                .getResource("employee.csv")
                 .getPath();
 
         try (Scanner scanner = new Scanner(new File(path))) {
