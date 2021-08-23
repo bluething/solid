@@ -9,8 +9,9 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.util.Properties;
 
-public class EmailSender {
-    public static void notify(Employee employee) {
+public class EmailSender implements EmailNotifier {
+    @Override
+    public void notify(Employee employee) {
         // Configure email server
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
