@@ -15,13 +15,13 @@ Every change causes a cascade of subsequent changes in dependent modules.
 
 ### Technical debt
 
-Both of the problems are a symptom of technical debt.
+Both of the problems are a symptom of technical debt. Technical debt is a cost of prioritizing fast delivery over code quality for long period of time.
 
 We have 2 choices when develop a software
 
 ###### Fast delivery
 
-1. Easiest to fix / make changes.  
+1. The easiest thing that we can do to implement a change or fix the bug.  
 2. Fast
 3. Poor written code.
 
